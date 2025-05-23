@@ -184,7 +184,8 @@
           document.getElementById("login-error").style.display = "none";
         }, 2000)
 
-        let response = await fetch("http://localhost:3000/enter", {
+        // Use "http://localhost:3000/enter" for dev enviroment
+        let response = await fetch("https://secured-pdf-be.onrender.com/enter", {
           method: "POST",
           headers: {
             "Content-Type": "application/json"
