@@ -24,13 +24,28 @@
 
     .viewer {
       position: relative;
-      height: 220vh;
+      height: 230vh;
       width: 98vw;
       background: url('img/pdf-folder/Med_PDF.png') no-repeat center center;
       background-repeat: no-repeat;
       background-position: center;
       transition: filter 0.5s ease;
+      background-size: 60% auto;
     }
+
+    @media (max-width: 1024px) {
+      .viewer {
+        position: relative;
+        height: 100vh;
+        width: 98vw;
+        background: url('img/pdf-folder/Med_PDF.png') no-repeat center center;
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: filter 0.5s ease;
+        background-size: 80% auto;
+      }
+    }
+
 
     .overlay {
       position: absolute;
@@ -132,7 +147,7 @@
 
     const sessionExpired = localStorage.getItem('sessionExpired');
 
-    if (sessionExpired === 'true') {
+    if (sessionExpired === 'false') {
       viewer.style.filter = 'blur(6px)';
       overlay.style.display = 'flex';
       emailInput.value = emailValue;
