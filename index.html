@@ -147,7 +147,7 @@
 
     const sessionExpired = localStorage.getItem('sessionExpired');
 
-    if (sessionExpired === 'false') {
+    if (sessionExpired === 'true') {
       viewer.style.filter = 'blur(6px)';
       overlay.style.display = 'flex';
       emailInput.value = emailValue;
